@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="{% static 'images/pekdev.png' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="pekdev Portfolio professionnel de Elvis - Développeur Web, Artiste et Leader">
+<title>Portfolio Pro - Elvis Mugisha</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+<h1>Portfolio</h1>
+<div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<nav id="navbar">
+  <a href="#about">À propos</a>
+  <a href="#services">Services</a>
+  <a href="#skills">Compétences</a>
+  <a href="#projects">Portfolio</a>
+  <a href="#boutique">Boutique</a>
+  <a href="#blog">Blog</a>
+  <a href="#testimonials">Témoignages</a>
+  <a href="#contact">Contact</a>
+  <button id="mode-btn"><i class="fas fa-moon"></i></button>
+  <div class="panier-icon" id="panier-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="panier-count" id="panier-count">0</span>
+  </div>
+  <a href="{% static 'images/CV_Elvis.pdf' %}" download class="download-cv"><i class="fas fa-download"></i> Télécharger CV</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+  <img src="{% static 'images/pekdev.png' %}" alt="Photo de Elvis">
+  <h2>Salut, je suis <span style="color:var(--text-color);">Pek dev</span></h2>
+  <p>Développeur Web | Artiste | Leader créatif passionné par l'innovation technologique</p>
+  <div class="hero-cta">
+    <button onclick="scrollToSection('projects')">Voir mon travail</button>
+    <button onclick="scrollToSection('boutique')">Découvrir la boutique</button>
+  </div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="container">
+  <h2 class="section-title">À propos de moi</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <div class="card">
+        <p>Je suis <strong>MUGISHA Elvis</strong>, passionné par la technologie, l'art et le leadership. Je crée des solutions digitales modernes et inspirantes pour des projets innovants.</p>
+        <p>Avec plusieurs années d'expérience dans le développement web et une passion pour l'art visuel, je combine technique et créativité pour produire des expériences utilisateur exceptionnelles.</p>
+      </div>
+      <div class="about-info">
+        <div class="about-info-item"><strong>Ville:</strong> Ngozi</div>
+        <div class="about-info-item"><strong>Diplôme:</strong> Bac en Informatique</div>
+        <div class="about-info-item"><strong>Disponibilité:</strong> Freelance</div>
+      </div>
+    </div>
+    <div class="about-skills">
+      <div class="skill">
+        <div class="skill-name">HTML/CSS <span>90%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="90"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript <span>60%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="60"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">PHP/SQL <span>85%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="85"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Python & IA <span>15%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="15"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="container">
+  <h2 class="section-title">Mes Services</h2>
+  <div class="services-grid">
+    <div class="card service-card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Développement Web</h3>
+      <p>Création de sites web responsives et modernes avec les dernières technologies pour une expérience utilisateur optimale.</p>
+    </div>
+    <div class="card service-card">
+      <i class="fas fa-robot"></i>
+      <h3>Applications</h3>
+      <p>Développement d'applications web et mobiles.</p>
+    </div>
+    <div class="card service-card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Formation & Leadership</h3>
+      <p>Formation en développement web, arts visuels et encadrement leadership pour développer vos compétences.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="skills">
+<div class="container">
+  <h2 class="section-title">Compétences</h2>
+  <div class="about-content">
+    <div class="about-skills">
+      <div class="skill">
+        <div class="skill-name">HTML/CSS <span>90%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="90"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript <span>60%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="60"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">PHP/SQL <span>85%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="85"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Python & IA <span>15%</span></div>
+        <div class="progress"><div class="progress-bar" data-skill="15"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title">Mon Portfolio</h2>
+
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="app">Applications</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="portfolio-grid">
+      {% for projet in projets %}
+      <div class="portfolio-item" data-category="{{ projet.categorie }}">
+        {% if projet.image %}
+        <img src="{{ projet.image.url }}" alt="{{ projet.titre }}">
+        {% elif projet.video_url %}
+        <iframe 
+          src="{{ projet.video_url }}"
+          title="{{ projet.titre }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        {% else %}
+        <img src="https://source.unsplash.com/random/400x300/?website,design" alt="{{ projet.titre }}">
+        {% endif %}
+        <div class="portfolio-info">
+          <h3>{{ projet.titre }}</h3>
+          <p>{{ projet.description|truncatewords:15 }}</p>
+        </div>
+      </div>
+      {% empty %}
+      <p>Aucun projet pour le moment.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="boutique">
+<div class="container">
+  <h2 class="section-title">Ma Boutique</h2>
+  <div class="boutique-filters">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="telephone">Téléphones</button>
+    <button class="filter-btn" data-filter="ordinateur">Ordinateurs</button>
+    <button class="filter-btn" data-filter="accessoire">Accessoires</button>
+  </div>
+  <div class="boutique-grid" id="boutique-grid">
+    {% for produit in produits %}
+    <div class="produit-card" data-categorie="{{ produit.categorie.nom|lower }}">
+      {% if produit.image %}
+      <img src="{{ produit.image.url }}" alt="{{ produit.nom }}" class="produit-image">
+      {% else %}
+      <img src="https://source.unsplash.com/random/300x300/?product" alt="{{ produit.nom }}" class="produit-image">
+      {% endif %}
+      <div class="produit-info">
+        <h3 class="produit-titre">{{ produit.nom }}</h3>
+        <p class="produit-description">{{ produit.description|truncatewords:10 }}</p>
+        <div class="produit-prix">{{ produit.prix }} Fbu</div>
+        <button class="ajouter-panier" data-id="{{ produit.id }}">Ajouter au panier</button>
+      </div>
+    </div>
+    {% empty %}
+    <p>Aucun produit pour le moment.</p>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+<section class="section" id="blog">
+<div class="container">
+  <h2 class="section-title">Blog & Actualités</h2>
+  <div class="blog-grid">
+    {% for article in articles %}
+    <div class="card blog-card">
+      {% if article.image %}
+      <img src="{{ article.image.url }}" alt="{{ article.titre }}">
+      {% else %}
+      <img src="https://source.unsplash.com/random/400x300/?coding,1" alt="Article de blog">
+      {% endif %}
+      <div class="blog-content">
+        <div class="blog-meta"><i class="far fa-calendar-alt"></i> {{ article.date_publication|date:"d F Y" }}</div>
+        <h3>{{ article.titre }}</h3>
+        <p>{{ article.contenu|truncatewords:20 }}</p>
+        <a href="{% url 'article_detail' article.id %}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    {% empty %}
+    <p>Aucun article pour le moment.</p>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+<section class="section" id="testimonials">
+<div class="container">
+  <h2 class="section-title">Témoignages</h2>
+  <div class="testimonials-container">
+    {% for temoignage in temoignages %}
+    <div class="testimonial">
+      <p class="testimonial-text">{{ temoignage.texte }}</p>
+      <p class="testimonial-author">– {{ temoignage.auteur }}</p>
+      {% if temoignage.fonction %}
+      <p class="testimonial-function">{{ temoignage.fonction }}</p>
+      {% endif %}
+    </div>
+    {% empty %}
+    <p>Aucun témoignage pour le moment.</p>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+  <h2 class="section-title">Contactez-moi</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3>Adresse</h3>
+          <p>Ngozi, Burundi</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>pequenakiduga1@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <h3>Téléphone</h3>
+          <p>+257 67 301 044</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <h3>Disponibilité</h3>
+          <p>Lun - Ven: 9h - 18h</p>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" id="contact-form" method="post" action="{% url 'contact' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" name="name" id="name" placeholder="Votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" name="email" id="email" placeholder="Votre email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Sujet</label>
+        <input type="text" name="subject" id="subject" placeholder="Sujet" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </div>
+</div>
+</section>
+
+<!-- Panier d'achat -->
+<div class="panier-sidebar" id="panier-sidebar">
+  <div class="panier-header">
+    <h3>Votre Panier</h3>
+    <button class="fermer-panier" id="fermer-panier">&times;</button>
+  </div>
+  <div class="panier-items" id="panier-items">
+    <!-- Articles du panier générés dynamiquement -->
+  </div>
+  <div class="panier-total" id="panier-total">Total: 0 Fbu</div>
+  <button class="passer-commande" id="passer-commande">Passer la commande</button>
+</div>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+  <span class="close" id="close">&times;</span>
+  <h2 id="modal-title"></h2>
+  <p id="modal-text"></p>
+</div>
+</div>
+
+<div class="back-to-top" id="back-to-top">
+<i class="fas fa-arrow-up"></i>
+</div>
+
+<footer>
+<div class="container">
+  <div class="social-links">
+    <a href="https://www.facebook.com/pequena.kiduga" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://wa.me/25767301044" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>© 2025 - Portfolio Elvis Mugisha | Conçu avec ❤</p>
+</div>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
